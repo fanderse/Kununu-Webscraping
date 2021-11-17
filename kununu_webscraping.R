@@ -17,10 +17,10 @@ library(readxl)
 ################################################################################
 # load list of company names
 
-setwd("C:/Users/FlorianAndersen/Callisto Management GmbH/01 01 Callisto Internal - General/06 Mitarbeiter Ordner/Florian Andersen/Lead Generation/Estario")
+setwd("")
 
 
-dataset <- read_excel("muenchen_company_names.xlsx", 
+dataset <- read_excel("example_company_list.xlsx", 
                                           col_names = FALSE)
 
 # add columns for kununu score and recommendation probability
@@ -97,10 +97,7 @@ dataset_worstcompanies <- dataset[dataset$kununu <= mean & dataset$nr_scores >= 
 ################################################################################
 # save data
 
-write_xlsx(dataset, "C:/Users/FlorianAndersen/Callisto Management GmbH/01 01 Callisto Internal - General/06 Mitarbeiter Ordner/Florian Andersen/Lead Generation/Estario/kununu_scores.xlsx")
-write_xlsx(dataset_worstcompanies, "C:/Users/FlorianAndersen/Callisto Management GmbH/01 01 Callisto Internal - General/06 Mitarbeiter Ordner/Florian Andersen/Lead Generation/Estario/kununu_scores2.xlsx")
+write_xlsx(dataset, "")
+write_xlsx(dataset_worstcompanies, "")
 
-
-#write.xlsx(dataset, "kununu_scores.xlsx", sheetName = "Main", append = FALSE)
-#write.xlsx(dataset_worstcompanies, "kununu_scores.xlsx", sheetName = "Bad Companies", append = TRUE)
 
